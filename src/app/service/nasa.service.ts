@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
+import { Nasa } from '../model/nasa';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class NasaService {
 
   constructor(public http: HttpClient) { }
 
-  getImageOfTheDay(): Observable<string>{
-    return this.http.get<string>(this.url);
+  getImageOfTheDay(): Observable<Nasa>{
+    return this.http.get<Nasa>(this.url);
   }
 }

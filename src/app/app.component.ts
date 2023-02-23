@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NasaService } from './service/nasa.service';
+import { Nasa } from './model/nasa';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { NasaService } from './service/nasa.service';
 })
 export class AppComponent implements OnInit {
   title = '12-API-NASA';
-  public imgOfTheDay: any = "";
+  public imgOfTheDay?: Nasa;
 
   constructor(public nasaService:NasaService){}
 
